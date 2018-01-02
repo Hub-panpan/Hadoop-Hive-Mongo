@@ -87,6 +87,16 @@ public class WordCount {
         }
     }
 
+/**
+ * 1.连接HDFS系统 (configuration)
+ * 2.创建执行任务(Job)
+ * 3.指定该任务的input文件地址（path）
+ * 4.指定该任务的map以及map输出参数配置类型
+ * 5.指定该任务的reduce以及reduce输出类型
+ * 6.指定非人为的output文件地址（path）
+ * 7.执行任务并获得结果
+ * */
+
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         Job job = new Job(conf);
@@ -112,13 +122,3 @@ public class WordCount {
     }
 }
 
-
-/**
- * 1.连接HDFS系统 (configuration)
- * 2.创建执行任务(Job)
- * 3.指定该任务的input文件地址（path）
- * 4.指定该任务的map以及map输出参数配置类型
- * 5.指定该任务的reduce以及reduce输出类型
- * 6.指定非人为的output文件地址（path）
- * 7.执行任务并获得结果
- * */
