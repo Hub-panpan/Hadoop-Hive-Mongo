@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="200cf95a-0014-48d4-ba8c-e8db6ba9e1d3" name="47.94.6.121" url="http://47.94.6.121:8080">
+        <fileTransfer host="47.94.6.121" port="22" rootFolder="/yundata/tomcat/webapps" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
