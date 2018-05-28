@@ -1,6 +1,12 @@
-首先说一下：本次小作业，可谓是一个综合性稍高的系统（就目前我们的水平哈，大佬勿喷），我们需要掌握的知识有，SSH中的strus,spring,hibernate等基本配置的的使用，这期间还涉及到mysql数据库的使用，,idea的使用，如何配置基于maven的环境，配置tomcat,并且必须有一台或者多个搭建好hadoop环境的服务器，必须还得可以与外界进行通信，我想对于我这样一个基础不牢，地动山摇的人来说，还是有一定的困难的。（当然，每个人的情况都不一样，光搭建这个环境就得话费好久的时间 哈哈哈哈）
+首先说一下：本次小作业，可谓是一个综合性稍高的系统（就目前我们的水平哈，大佬勿喷），我们需要掌握的知识有
+- SSH中的strus,spring,hibernate等基本配置的的使用
+- 这期间还涉及到mysql数据库的使用
+- idea的使用，如何配置基于maven的环境，配置tomcat
+- 并且必须有一台或者多个搭建好hadoop环境的服务器，必须还得可以与外界进行通信，
 
-##准备1：启动虚拟机 开启hdfs文件系统
+我想对于我这样一个基础不牢，地动山摇的人来说，还是有一定的困难的。（当然，每个人的情况都不一样，光搭建这个环境就得话费好久的时间 哈哈哈哈）
+
+## 准备1：启动虚拟机 开启hdfs文件系统
 1.进入hadoop的安装目录
 
 ```
@@ -8,7 +14,7 @@
 ```
 出现下图，则证明文件系统启动成功：
 ![这里写图片描述](http://img.blog.csdn.net/20171104155204069?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc2Mzk1NDI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-##准备2：关闭文件系统读写保护
+## 准备2：关闭文件系统读写保护
 不关闭或者文件系统未正常启动时，都会报出读写错误信息。
 在Hadoop的安装目录下，修改/etc/hadoophdfs-site.xml文件
 ```
@@ -19,7 +25,7 @@
 ```
 记得重启hdfs系统。
 
-##准备3.学会Hadoop的命令
+## 准备3.学会Hadoop的命令
 如果你很熟悉这个，可以跳过！！一会会用的到
 
 1.命令行输入hadoop没有反应提示：没有相关名令
@@ -85,7 +91,7 @@ hadoop fs -ls
 显示结果如图1所示,只是我的文件比较少。
 ![这里写图片描述](http://img.blog.csdn.net/20171104154344935?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc2Mzk1NDI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-###2 .获取文件
+### 2 .获取文件
 
 获取文件包含两层意思，一是HDFS从本地文件中获取文件，即前面介绍的添加文件；二是本地文件从HDFS中获取文件，可以使用Hadoop的get命令。例如若本地文件没有README.txt文件，需要从HDFS中取回，可以执行如下命令。
 
@@ -99,7 +105,7 @@ hadoop fs -get  ceshi.txt  .
 hadoop fs -get ceshi.txt  /usr/xxx/xxxx/ceshi.txt
 ```
 
-###3. 删除文件
+### 3. 删除文件
 
 Hadoop删除文件命令为rm。例如要删除从本地文件上传的README.txt，可以执行如下命令。
 
@@ -107,7 +113,7 @@ Hadoop删除文件命令为rm。例如要删除从本地文件上传的README.tx
 hadoop  fs -rm  ceshi.txt
 ```
 
-###4.检索文件
+### 4.检索文件
 
 检索文件即查阅HDFS中的文件内容，可以使用hadoop中的cat命令。例如要查阅README.txt的内容，可以执行如下命令。
 
@@ -130,7 +136,7 @@ Hadoop也支持tail命令查看最后一千字节。例如要查阅README.txt最
 hadoop fs -tail ceshi.txt
 ```
 
-###5.查阅帮助
+### 5.查阅帮助
 
 查阅Hadoop命令帮助，可以让我们很好地掌握和使用Hadoop的 命令。我们可以执行hadoop fs 获取所用版本Hadoop的一个完整命令列别，也可以使用help来显示某个具体命令的用法及简短描述。
 
@@ -248,6 +254,17 @@ public static void getDirectoryFromHdfs(String direPath) throws Exception {
         fs.close();
     }
 ```
-
 执行结果：
+
 ![这里写图片描述](http://img.blog.csdn.net/20171104160848532?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc2Mzk1NDI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+
+
+
+
+
+欢迎交流！panpan668706
+
+
+
+
